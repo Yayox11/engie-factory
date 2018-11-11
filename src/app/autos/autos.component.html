@@ -1,0 +1,75 @@
+<section>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-primary text-center" role="alert">
+        <h4>Ingresar automovil</h4>
+        <hr>
+        <form [formGroup]="createform" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-1">
+                <label>Marca:</label>
+              </div>
+              <div class="col-md-3">
+                <input class="form-control" aria-describedby="emailHelp" placeholder="Ingrese Marca" id="marca" formControlName="marca" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-1">
+                <label>Modelo:</label>
+              </div>
+              <div class="col-md-3">
+                <input class="form-control" aria-describedby="emailHelp" placeholder="Ingrese Modelo" id="modelo" formControlName="modelo" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-1">
+                <label>Año:</label>
+              </div>
+              <div class="col-md-3">
+                <input class="form-control" aria-describedby="emailHelp" placeholder="Ingrese Anio" id="anio" formControlName="anio" required>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline-primary" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-dark text-center">
+    <h4>Editar y Borrar Autos</h4>
+    <hr>
+    <div class="row">
+      <div class="col-12">
+        <table class="table" style="width:100%">
+          <thead class="thead-dark">
+            <tr>
+              <th>#</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>Accion</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let auto of autos">
+            <th>{{auto.id_auto}}</th>
+            <th>{{auto.marca}}</th>
+            <th>{{auto.modelo}}</th>
+            <th>{{auto.anio}}</th>
+            <th>
+              <a type="button" class="btn btn-primary" onclick="" >Editar</a>
+              <a type="button" class="btn btn-danger" (click)="onDelete($event,auto.id_auto)">Borrar</a>
+            </th>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>
