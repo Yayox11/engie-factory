@@ -132,6 +132,23 @@ router.delete('/d_autos/:id',function (req,res,next) {
     });
 });
 
+// Filtro de clientes segun auto
+
+router.get('/cliente_filter/:id',function (req,res) {
+  id_url = req.params.id;
+  clientes.findAll({
+    where: {
+      auto_id: id_url
+    }
+  }).then(id_auto => {
+    res.status(200).json(id_auto[0]);
+  })
+    .catch(function (err) {
+      console.log("ups algo ha salido mal :C");
+      return next(err);
+    });
+});
+
 
 
 module.exports = router;
