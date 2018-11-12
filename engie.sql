@@ -39,7 +39,7 @@ CREATE TABLE `autos` (
 
 LOCK TABLES `autos` WRITE;
 /*!40000 ALTER TABLE `autos` DISABLE KEYS */;
-INSERT INTO `autos` VALUES (1,'Fiat','300',2000),(2,'Audi','a3',2018),(3,'Subaru','Impreza',2018);
+INSERT INTO `autos` VALUES (1,'Fiat','300',2000),(2,'Audi','a3',2018),(3,'Subaru','Impreza',2017);
 /*!40000 ALTER TABLE `autos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -67,9 +67,17 @@ CREATE TABLE `clientes` (
 
 LOCK TABLES `clientes` WRITE;
 /*!40000 ALTER TABLE `clientes` DISABLE KEYS */;
-INSERT INTO `clientes` VALUES (1,'12.344.221-3','Pedro',1),(2,'19.987.342-2','Claudio',2),(3,'17-353-847-7','Martin',1);
+INSERT INTO `clientes` VALUES (1,'12.344.221-3','Pedro',1),(2,'19.837.485-9','Claudio',1),(3,'17.361.563-3','Martin',2);
 /*!40000 ALTER TABLE `clientes` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'engie'
+--
+
+--
+-- Dumping routines for database 'engie'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -80,4 +88,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-11 18:37:29
+-- Dump completed on 2018-11-11 21:49:48

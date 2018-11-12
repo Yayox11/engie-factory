@@ -7,5 +7,6 @@ Versiones:
 
 Instrucciones:
 	- Ejecutar $ npm install
-	- Ejecutar $ npm serve
+	- Ejecutar $ npm install sequelize
+	- Ejecutar $ npm run serve
 
