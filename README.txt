@@ -8,5 +8,7 @@ Versiones:
 Instrucciones:
 	- Ejecutar $ npm install
 	- Ejecutar $ npm install sequelize
+	- Configurar conexión a la base de datos en el archivo /api/sequelize.js
+	- Cargar la base de datos presente en el archivo engie.sql
 	- Ejecutar $ npm run serve
 
