@@ -3,7 +3,7 @@ Versiones:
 	Node: 8.12.0
 	OS: win32 x64
 	Angular: 7.0.3
-	MySQL: 5.7.21
+	MySQL: 5.6.17
 
 Instrucciones:
 	- Ejecutar $ npm install
