@@ -21,7 +21,7 @@ router.get('/', function (req, res) {
 
 //Obtener Clientes
 
-router.get('/clientes',function (req,res) {
+router.get('/clientes',function (req,res,next) {
   clientes.findAll().then(clientes => {
     res.status(200).json(clientes)
     console.log(clientes);
@@ -88,7 +88,7 @@ router.post('/crear_autos',function (req,res,next) {
 
 //Obtener Autos
 
-router.get('/autos',function (req,res) {
+router.get('/autos',function (req,res,next) {
   autos.findAll().then(autos => {
     res.status(200).json(autos)
   })
@@ -98,7 +98,7 @@ router.get('/autos',function (req,res) {
     });
 });
 
-router.get('/autos_form/:marca/:modelo',function (req,res) {
+router.get('/autos_form/:marca/:modelo',function (req,res,next) {
   marca_url = req.params.marca;
   modelo_url = req.params.modelo;
   autos.findAll({
@@ -134,7 +134,7 @@ router.delete('/d_autos/:id',function (req,res,next) {
 
 // Filtro de clientes segun auto
 
-router.get('/cliente_filter/:id',function (req,res) {
+router.get('/cliente_filter/:id',function (req,res,next) {
   id_url = req.params.id;
   clientes.findAll({
     where: {
